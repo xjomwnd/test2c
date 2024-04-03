@@ -9,13 +9,9 @@ require('dotenv').config();
 
 var app = express();
 
-
+mongoose.set('strictQuery', false);
 
 const uri = 'mongodb+srv://ndimong:<password>@cluster0.iwufs.mongodb.net/';
-
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error('Error connecting to MongoDB:', err));
 
 
 mongodb.initDb((err) => {
