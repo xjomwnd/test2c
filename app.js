@@ -9,7 +9,7 @@ var app = express();
 
 
 
-const uri = 'mongodb://localhost:27017/mydatabase';
+const uri = 'mongodb+srv://ndimong:<password>@cluster0.iwufs.mongodb.net/';
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
